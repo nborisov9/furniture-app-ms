@@ -1,0 +1,113 @@
+.content {
+  // .content__prodcut
+  &__prodcut {
+    padding: 40px 0px 100px 0px;
+  }
+}
+.content-product {
+  // .content-product__row
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  // .content-product__item
+  &__item {
+    width: 300px;
+  }
+}
+.item-product {
+  flex: 0 1 33.333%;
+  padding: 0px 0px 60px 0px;
+  text-align: center;
+  &__title {
+    padding: 20px 0px 20px 0px;
+    font-family: 'Ubuntu';
+    font-size: 25px;
+    text-align: center;
+  }
+  &__wrapper-selector {
+    background-color: rgba(226, 226, 226, 0.678);
+    padding: 10px 10px;
+    border-radius: 12px;
+  }
+  // .item-product__image
+  &__image {
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 10%;
+    }
+  }
+  // .item-product__body
+  &__body {
+    width: 300px;
+    margin: 0 auto;
+  }
+  // .item-product__type
+  &__type {
+  }
+  // .item-product__size
+  &__size {
+  }
+  // .item-product__bottom
+  &__bottom {
+  }
+}
+.type-product {
+  // .type-product__body
+  &__body {
+    display: flex;
+  }
+  // .type-product__item
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    &.active-selector {
+      background-color: $white;
+    }
+  }
+}
+.size-product {
+  // .size-product__body
+  &__body {
+    display: flex;
+    padding: 10px 0px 0px 0px;
+  }
+  // .size-product__item
+  &__item {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 0;
+    border-radius: 7px;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+    &.active-selector {
+      background-color: $white;
+    }
+    span {
+      padding: 0px 0px 0px 5px;
+    }
+  }
+}
+.product-bottom {
+  padding: 12px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // .product-bottom__price
+  &__price {
+    font-weight: 600;
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
+
+@import './libs/normalize';
+@import './components/all.scss';
+@import './variables';
+
+body {
+  color: #000;
+  font-size: 14px;
+  &._lock {
+    overflow: hidden;
+  }
+  font-family: 'Open Sans', sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+
+  @media (max-width: $md1) {
+    max-width: 1050px; // * temporarily
+  }
+
+  // @media (max-width: $md1) {
+  //   max-width: 970px;
+  // }
+  // @media (max-width: $md2) {
+  //   max-width: 750px;
+  // }
+  // @media (max-width: $md3) {
+  //   max-width: none;
+  //   padding: 0 10px;
+  // }
+}
+
+.content {
+  &__title {
+    padding: 20px 0px 0px 0px;
+    font-size: 38px;
+    font-family: 'Ubuntu';
+  }
+}

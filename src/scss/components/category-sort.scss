@@ -1,0 +1,113 @@
+.content {
+  // .content__top
+  &__top {
+    padding: 32px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.content-top {
+}
+.categories {
+  // .categories__item
+  &__item {
+    background: #eeeeee;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin: 0px 0px 0px 10px;
+    &.active-category {
+      background-color: rgb(32, 32, 32);
+      color: $white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin: 0px 0px 0px 10px;
+    }
+  }
+}
+.categoris {
+  // .categoris__list
+  &__list {
+    display: flex;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    li {
+      background: #eeeeee;
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin: 0px 0px 0px 10px;
+      &:first-child {
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.sort {
+  // .sort__title
+  &__title {
+    font-size: 18px;
+    span {
+      cursor: pointer;
+      color: $blue;
+      border-bottom: 1px dashed $blue;
+    }
+  }
+}
+
+.popup-sort {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  z-index: 1;
+  // .popup-sort__list
+  &__list {
+    display: none;
+
+    li {
+      padding: 5px 10px;
+      line-height: 2;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    &.active-popup {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      background: #ffffff;
+      box-shadow: 0px 3px 8px 0px rgba(34, 60, 80, 0.2);
+      border-radius: 10%;
+      padding: 15px 0px;
+    }
+  }
+  // .popup-sort__item
+  &__item {
+    padding: 5px 10px;
+    line-height: 2;
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+
+.active-sort {
+  background-color: rgba(19, 163, 247, 0.055);
+  padding: 5px 10px;
+  line-height: 2;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.arrow {
+  margin: 0px 8px 0px 0px;
+  transform: translateY(5px);
+}
+
+.arrow-active {
+  margin: 0px 8px 0px 0px;
+  transform: translateY(5px);
+  transform: rotate(180deg);
+}
