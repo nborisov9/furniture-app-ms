@@ -1,26 +1,20 @@
 import React from 'react'
 
-export const Categories = ({ categoryNames }) => {
-  const [activeCategory, setAcriveCategory] = React.useState(null)
-
-  const selectCategory = (index) => {
-    setAcriveCategory(index)
-  }
-
+export const Categories = ({ categoryNames, onClickCategories, activeCategories }) => {
   return (
     <div className="content-top__categories categories">
       <ul className="categoris__list">
         <li
-          onClick={() => selectCategory(null)}
-          className={activeCategory === null ? 'categories__item active-category' : ''}>
+          onClick={() => onClickCategories(null)}
+          className={activeCategories === null ? 'categories__item active-category' : ''}>
           Все
         </li>
         {categoryNames &&
           categoryNames.map((name, index) => (
             <li
               key={`${index}_${name}`}
-              onClick={() => selectCategory(index)}
-              className={activeCategory === index ? 'categories__item active-category' : ''}>
+              onClick={() => onClickCategories(index)}
+              className={activeCategories === index ? 'categories__item active-category' : ''}>
               {name}
             </li>
           ))}

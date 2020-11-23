@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const SortPopup = ({ sortItems }) => {
+export const SortPopup = ({ sortItems, onClickSortType }) => {
   const [visiblePopup, setVisiblePopup] = React.useState(false)
-  const [activeItem, setActiveItem] = React.useState(0)
-  const activeLabel = sortItems[activeItem].name
+  const [activeItem, setActiveItem] = React.useState(sortItems[0].name)
+  const activeLabel = activeItem
   const sortRef = React.useRef()
 
   const toggleVisiblePopup = () => {
@@ -17,8 +17,9 @@ export const SortPopup = ({ sortItems }) => {
     }
   }
 
-  const onSelectItem = (index) => {
-    setActiveItem(index)
+  const onSelectItem = (obj) => {
+    setActiveItem(obj.name)
+    onClickSortType(obj)
     setVisiblePopup(false)
   }
 
@@ -34,18 +35,18 @@ export const SortPopup = ({ sortItems }) => {
           className={
             visiblePopup ? 'arrow fas fa-sort-up arrow-active' : 'arrow fas fa-sort-up'
           }></i>
-        Сортировка по: <span onClick={toggleVisiblePopup}>{activeLabel}</span>
+        Сортировать по: <span onClick={toggleVisiblePopup}>{activeLabel}</span>
       </div>
       {visiblePopup && (
         <div className="sort__popup popup-sort">
           <ul className="popup-sort__list active-popup">
             {sortItems &&
-              sortItems.map(({ name, type }, index) => (
+              sortItems.map((obj, index) => (
                 <li
-                  onClick={() => onSelectItem(index)}
-                  key={`${index}_${type}`}
-                  className={index === activeItem ? 'active-sort' : ''}>
-                  {name}
+                  onClick={() => onSelectItem(obj)}
+                  key={`${index}_${obj.type}`}
+                  className={obj.name === activeItem ? 'active-sort' : ''}>
+                  {obj.name}
                 </li>
               ))}
           </ul>
