@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { Categories, ChairsBlock, SortPopup } from '../components'
+import { Categories, ChairsBlock, SortPopup, LoadingBlock } from '../components'
 import { fetchChairs } from '../redux/actions/chairs'
 import { setSortBy, setCategory } from '../redux/actions/filters'
 import { addChairsToCart } from '../redux/actions/cart'
@@ -15,7 +15,9 @@ const sortItems = [
 
 export const Home = () => {
   const dispatch = useDispatch()
+
   const items = useSelector(({ chairs }) => chairs.items)
+  const isLoaded = useSelector(({ chairs }) => chairs.isLoaded)
   const { category, sortBy } = useSelector(({ filters }) => filters)
 
   React.useEffect(() => {
@@ -47,14 +49,18 @@ export const Home = () => {
       </div>
       <div className="content__prodcut content-product">
         <div className="content-product__row">
-          {items &&
-            items.map((obj) => (
-              <ChairsBlock
-                onClickAddChair={handleChairToCart}
-                key={`${obj.id}_${obj.name}`}
-                {...obj}
-              />
-            ))}
+          {isLoaded
+            ? items &&
+              items.map((obj) => (
+                <ChairsBlock
+                  onClickAddChair={handleChairToCart}
+                  key={`${obj.id}_${obj.name}`}
+                  {...obj}
+                />
+              ))
+            : Array(24)
+                .fill(0)
+                .map((_, index) => <LoadingBlock key={index} />)}
         </div>
       </div>
     </div>

@@ -12,7 +12,6 @@
   }
   // .content-product__item
   &__item {
-    width: 300px;
   }
 }
 .item-product {
@@ -40,7 +39,7 @@
   }
   // .item-product__body
   &__body {
-    width: 300px;
+    width: 330px;
     margin: 0 auto;
   }
   // .item-product__type
@@ -71,9 +70,16 @@
     cursor: pointer;
     &.active-selector {
       background-color: $white;
+      cursor: pointer;
     }
   }
 }
+
+.disable-selector {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .size-product {
   // .size-product__body
   &__body {

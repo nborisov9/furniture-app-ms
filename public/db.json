@@ -5,7 +5,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/leifarn…inge-hromirovannyy__0870288_PE595421_S5.JPG?f=xxs",
       "name": "LEIFARNE ",
       "types": [0],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [1],
       "price": 9500,
       "category": 1,
       "rating": 10
@@ -15,7 +15,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/frankli…ladnoy-belyy-belyy__0873922_PE680516_S5.JPG?f=xxs",
       "name": "INGOLF",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 2800,
       "category": 1,
       "rating": 5
@@ -24,8 +24,8 @@
       "id": 8,
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/dalfred…ret-barnyy-chernyy__0874458_PE595557_S5.JPG?f=xxs",
       "name": "DALFRED ",
-      "types": [0],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "types": [1],
+      "sizes": [0, 1],
       "price": 5000,
       "category": 1,
       "rating": 7
@@ -35,7 +35,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/leifarn…inge-hromirovannyy__0870288_PE595421_S5.JPG?f=xxs",
       "name": "LEIFARNE",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 7000,
       "category": 1,
       "rating": 9
@@ -44,8 +44,8 @@
       "id": 0,
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/agen-kreslo-rotang-bambuk__0841131_PE601047_S5.JPG?f=xxs",
       "name": "AGEN",
-      "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "types": [1],
+      "sizes": [0, 1, 2],
       "price": 5300,
       "category": 0,
       "rating": 9
@@ -55,7 +55,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/poaeng-poeng-kreslo-berezovyy-shpon-glose-svetlo-bezhevyy__0837647_PE601073_S5.JPG?f=xxs",
       "name": "POÄNG",
       "types": [0],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1],
       "price": 2500,
       "category": 0,
       "rating": 7
@@ -64,8 +64,8 @@
       "id": 2,
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/gessberg-kreslo-glose-bumstad-bezhevyy__0837690_PE648018_S5.JPG?f=xxs",
       "name": "GESSBERG",
-      "types": [0],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "types": [0, 1],
+      "sizes": [0, 2],
       "price": 2800,
       "category": 0,
       "rating": 10
@@ -74,8 +74,8 @@
       "id": 3,
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/finntorp-kreslo-belyy__0840767_PE600875_S5.JPG?f=xxs",
       "name": "FINNTORP",
-      "types": [0],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "types": [1],
+      "sizes": [2],
       "price": 2900,
       "category": 0,
       "rating": 10
@@ -85,7 +85,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/lidhult-lidgult-kreslo-grann-bumstad-zolotisto-korichnevyy__0619115_PE688925_S5.JPG",
       "name": "LIDGULT",
       "types": [0],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 3100,
       "category": 0,
       "rating": 8
@@ -95,7 +95,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/buskbo-buskbu-kreslo-rotang-yupvik-belyy__0837612_PE719538_S5.JPG?f=xxs",
       "name": "BUKSBU",
       "types": [0],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 7500,
       "category": 0,
       "rating": 10
@@ -105,7 +105,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/norrake…oker-skamya-bereza__0682550_PE720526_S5.JPG?f=xxs",
       "name": "NORRAKER",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1],
       "price": 4300,
       "category": 2,
       "rating": 9
@@ -115,7 +115,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/stig-st…hernyy-serebristyy__0768254_PE754391_S5.JPG?f=xxs",
       "name": "STIG",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 3900,
       "category": 2,
       "rating": 10
@@ -124,8 +124,8 @@
       "id": 12,
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/dalfred…ret-barnyy-chernyy__0874458_PE595557_S5.JPG?f=xxs",
       "name": "DALFRED",
-      "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "types": [1],
+      "sizes": [0, 1, 2],
       "price": 7300,
       "category": 2,
       "rating": 4
@@ -135,7 +135,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/janinge…buret-barnyy-belyy__0874498_PE595581_S5.JPG?f=xxs",
       "name": "JANINGE",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1],
       "price": 4500,
       "category": 2,
       "rating": 5
@@ -145,7 +145,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/bernhar…-temno-korichnevyy__0743277_PE742950_S5.JPG?f=xxs",
       "name": "BERNHARD",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 4300,
       "category": 2,
       "rating": 10
@@ -155,7 +155,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/leifarn…tmar-hromirovannyy__0872104_PE595422_S5.JPG?f=xxs",
       "name": "LEIFARNE",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [1, 2],
       "price": 9300,
       "category": 3,
       "rating": 10
@@ -165,7 +165,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/janinge…-inge-stul-zheltyy__0719973_PE732347_S5.JPG?f=xxs",
       "name": "JANINGE",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [1, 2],
       "price": 6300,
       "category": 3,
       "rating": 9
@@ -174,8 +174,8 @@
       "id": 17,
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/norrake…oker-skamya-bereza__0682550_PE720526_S5.JPG?f=xxs",
       "name": "NORRAKER",
-      "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "types": [0],
+      "sizes": [0, 1, 2],
       "price": 7800,
       "category": 3,
       "rating": 8
@@ -185,7 +185,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/yngvar-…gvar-stul-antracit__0750850_PE746841_S5.JPG?f=xxs",
       "name": "YNGVAR",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [1, 2],
       "price": 9900,
       "category": 3,
       "rating": 10
@@ -195,7 +195,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/stefan-stul-belyy__0456421_PE604075_S5.JPG?f=xxs",
       "name": "STEFAN",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 8000,
       "category": 4,
       "rating": 5
@@ -205,7 +205,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/leifarn…inge-hromirovannyy__0870288_PE595421_S5.JPG?f=xxs",
       "name": "LEIFARNE",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 3200,
       "category": 4,
       "rating": 4
@@ -215,7 +215,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/adde-stul-chernyy__0872134_PE716740_S5.JPG?f=xxs",
       "name": "ADDE",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 2300,
       "category": 4,
       "rating": 6
@@ -224,8 +224,8 @@
       "id": 22,
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/fanbyn-…a-sada-belyy-belyy__0816362_PE773468_S5.JPG?f=xxs",
       "name": "FANBYN",
-      "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "types": [0],
+      "sizes": [0, 1, 2],
       "price": 8200,
       "category": 4,
       "rating": 3
@@ -235,7 +235,7 @@
       "imageUrl": "https://www.ikea.com/ru/ru/images/products/martin-…ul-chernyy-chernyy__0870396_PE641098_S5.JPG?f=xxs",
       "name": "MARTIN",
       "types": [0, 1],
-      "sizes": ["128x128", "80x80", "100x100"],
+      "sizes": [0, 1, 2],
       "price": 9100,
       "category": 4,
       "rating": 5

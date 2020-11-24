@@ -7,7 +7,6 @@ import line from '../assets/img/Header/vertline.png'
 
 export const Header = () => {
   const { totalPrice, totalCount } = useSelector(({ cart }) => cart)
-  console.log(totalPrice, totalCount)
 
   return (
     <div className="header">
