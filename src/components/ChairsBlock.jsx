@@ -2,9 +2,19 @@ import React from 'react'
 
 import { Button } from './Button'
 
-export const ChairsBlock = ({ name, imageUrl, price }) => {
+export const ChairsBlock = ({ name, imageUrl, price, id, onClickAddChair }) => {
   const availTypes = ['цельные', 'разборные']
   const availSizes = ['128x128', '80x80', '100x100']
+
+  const onAddChairToCart = () => {
+    const obj = {
+      name,
+      imageUrl,
+      price,
+      id,
+    }
+    onClickAddChair(obj)
+  }
 
   return (
     <div className="content-product__item item-product">
@@ -37,7 +47,7 @@ export const ChairsBlock = ({ name, imageUrl, price }) => {
           <div className="product-bottom__price">
             от <span>{price} ₽</span>
           </div>
-          <Button className="button-count" outline>
+          <Button onClick={onAddChairToCart} className="button-count" outline>
             <i className="fas fa-plus"></i>
             Добавить
             <span>3</span>

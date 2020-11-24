@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 import { Button } from './Button'
-import lineIcon from '../assets/img/Header/vertline.png'
+import line from '../assets/img/Header/vertline.png'
 
 export const Header = () => {
+  const { totalPrice, totalCount } = useSelector(({ cart }) => cart)
+  console.log(totalPrice, totalCount)
+
   return (
     <div className="header">
       <div className="header__top top-header">
@@ -46,13 +50,13 @@ export const Header = () => {
             <Link to="/cart">
               <Button className="button-cart button">
                 <div className="button-price-icon">
-                  <span>520</span>
+                  <span>{totalPrice}</span>
                   <i className="fas fa-ruble-sign"></i>
                 </div>
-                <img src={lineIcon} alt="" />
+                <img src={line} alt="" />
                 <div className="button-cart-icon">
                   <i className="fas fa-shopping-basket"></i>
-                  <span>3</span>
+                  <span>{totalCount}</span>
                 </div>
               </Button>
             </Link>

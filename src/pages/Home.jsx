@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Categories, ChairsBlock, SortPopup } from '../components'
 import { fetchChairs } from '../redux/actions/chairs'
 import { setSortBy, setCategory } from '../redux/actions/filters'
+import { addChairsToCart } from '../redux/actions/cart'
 
 const categoryNames = ['Кресла', 'Барные', 'Табуреты', 'Для кафе', 'Для кухни']
 const sortItems = [
@@ -29,6 +30,10 @@ export const Home = () => {
     dispatch(setSortBy(type))
   }, [])
 
+  const handleChairToCart = (obj) => {
+    dispatch(addChairsToCart(obj))
+  }
+
   return (
     <div className="container">
       <div className="content__title">Стулья</div>
@@ -42,7 +47,14 @@ export const Home = () => {
       </div>
       <div className="content__prodcut content-product">
         <div className="content-product__row">
-          {items && items.map((obj) => <ChairsBlock key={`${obj.id}_${obj.name}`} {...obj} />)}
+          {items &&
+            items.map((obj) => (
+              <ChairsBlock
+                onClickAddChair={handleChairToCart}
+                key={`${obj.id}_${obj.name}`}
+                {...obj}
+              />
+            ))}
         </div>
       </div>
     </div>
