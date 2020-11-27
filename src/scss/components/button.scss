@@ -94,3 +94,28 @@
     border: 2px solid $blue;
   }
 }
+
+.btn-exit {
+  padding: 17px 30px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid $gray-light;
+  i {
+    margin: 0px 5px 0px 0px;
+  }
+  color: rgb(160, 160, 160);
+  font-size: 18px;
+}
+
+.btn-pay {
+  padding: 17px 31px;
+}
+
+.btn-cart-hover {
+  &:hover {
+    transform: translateY(0px);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}
