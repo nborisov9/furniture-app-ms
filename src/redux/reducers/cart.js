@@ -4,6 +4,20 @@ const initialState = {
   totalCount: 0,
 }
 
+const filterDataByPath = (obj, path) => {
+  const [firstKey, ...keys] = path.split('.')
+  return keys.reduce((value, key) => {
+    return value[key]
+  }, obj[firstKey])
+}
+
+const getTotalData = (obj, path) => {
+  return Object.values(obj).reduce((total, obj) => {
+    const value = filterDataByPath(obj, path) + total
+    return value
+  }, 0)
+}
+
 export const cart = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_CHAIRS_CART': {
@@ -19,14 +33,8 @@ export const cart = (state = initialState, action) => {
         },
       }
 
-      const totalPrice = Object.keys(newItems).reduce(
-        (total, id) => total + newItems[id].totalPrice,
-        0,
-      )
-      const totalCount = Object.keys(newItems).reduce(
-        (total, id) => total + newItems[id].items.length,
-        0,
-      )
+      const totalPrice = getTotalData(newItems, 'totalPrice')
+      const totalCount = getTotalData(newItems, 'items.length')
 
       return {
         ...state,
