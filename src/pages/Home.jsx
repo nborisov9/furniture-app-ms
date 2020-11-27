@@ -18,6 +18,7 @@ export const Home = () => {
 
   const items = useSelector(({ chairs }) => chairs.items)
   const isLoaded = useSelector(({ chairs }) => chairs.isLoaded)
+  const chairsCount = useSelector(({ cart }) => cart.items)
   const { category, sortBy } = useSelector(({ filters }) => filters)
 
   React.useEffect(() => {
@@ -54,6 +55,7 @@ export const Home = () => {
               items.map((obj) => (
                 <ChairsBlock
                   onClickAddChair={handleChairToCart}
+                  addChairsCount={chairsCount[obj.id] && chairsCount[obj.id].items.length}
                   key={`${obj.id}_${obj.name}`}
                   {...obj}
                 />

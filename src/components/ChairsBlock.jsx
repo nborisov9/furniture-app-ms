@@ -3,8 +3,17 @@ import classNames from 'classnames'
 
 import { Button } from './Button'
 
-export const ChairsBlock = ({ name, imageUrl, price, id, types, sizes, onClickAddChair }) => {
-  const availTypes = ['цельные', 'разборные']
+export const ChairsBlock = ({
+  name,
+  imageUrl,
+  price,
+  id,
+  types,
+  sizes,
+  onClickAddChair,
+  addChairsCount,
+}) => {
+  const availTypes = ['цельный', 'разборный']
   const availSizes = ['128x128', '80x80', '100x100']
 
   const [activeSize, setActiveSize] = React.useState(sizes[0])
@@ -76,7 +85,7 @@ export const ChairsBlock = ({ name, imageUrl, price, id, types, sizes, onClickAd
           <Button onClick={onAddChairToCart} className="button-count" outline>
             <i className="fas fa-plus"></i>
             Добавить
-            <span>3</span>
+            {addChairsCount && <span>{addChairsCount}</span>}
           </Button>
         </div>
       </div>
