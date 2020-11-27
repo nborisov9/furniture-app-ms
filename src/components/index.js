@@ -4,5 +4,6 @@ import { ChairsBlock } from './ChairsBlock'
 import { Categories } from './Categories'
 import { SortPopup } from './SortPopup'
 import { LoadingBlock } from './LoadingBlock'
+import { CartItems } from './CartItems'
 
-export { Header, Button, ChairsBlock, Categories, SortPopup, LoadingBlock }
+export { Header, Button, ChairsBlock, Categories, SortPopup, LoadingBlock, CartItems }
