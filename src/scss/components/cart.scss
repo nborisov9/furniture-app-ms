@@ -170,3 +170,27 @@
     }
   }
 }
+
+.cart-empty {
+  padding: 80px 0px 0px 0px;
+  text-align: center;
+
+  // .cart-empty__title
+  &__title {
+    font-weight: 600;
+    font-size: 30px;
+  }
+  // .cart-empty__text
+  &__text {
+    padding: 20px 0px 0px 0px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  // .cart-empty__image
+  &__image {
+    img {
+      height: 500px;
+      width: 100%;
+    }
+  }
+}

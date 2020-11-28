@@ -124,3 +124,21 @@
     transform: translateY(2px);
   }
 }
+
+.button-cart-emty {
+  margin: 20px 0px 0px 0px;
+  span {
+    color: $white;
+    font-size: 20px;
+  }
+  padding: 14px 23px;
+  border-radius: 30px;
+  border: 1px solid rgb(59, 59, 59);
+  background-color: rgb(59, 59, 59);
+  &:hover {
+    transform: translateY(0px);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}

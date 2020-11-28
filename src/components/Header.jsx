@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 import { Button } from './Button'
-import line from '../assets/img/Header/vertline.png'
+import line from '../assets/img/header/vertline.png'
 
 export const Header = () => {
   const { totalPrice, totalCount } = useSelector(({ cart }) => cart)
