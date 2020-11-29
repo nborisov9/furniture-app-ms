@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const SortPopup = ({ sortItems, onClickSortType }) => {
+export const SortPopup = React.memo(({ sortItems, onClickSortType }) => {
   const [visiblePopup, setVisiblePopup] = React.useState(false)
   const [activeItem, setActiveItem] = React.useState(sortItems[0].name)
   const activeLabel = activeItem
@@ -26,7 +26,7 @@ export const SortPopup = ({ sortItems, onClickSortType }) => {
   React.useEffect(() => {
     document.body.addEventListener('click', hadnleOutsideClick)
     return () => document.body.removeEventListener('click', hadnleOutsideClick)
-  })
+  }, [])
 
   return (
     <div ref={sortRef} className="content-top__sort sort">
@@ -54,4 +54,4 @@ export const SortPopup = ({ sortItems, onClickSortType }) => {
       )}
     </div>
   )
-}
+})

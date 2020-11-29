@@ -133,8 +133,8 @@
   }
   padding: 14px 23px;
   border-radius: 30px;
-  border: 1px solid rgb(59, 59, 59);
-  background-color: rgb(59, 59, 59);
+  border: 1px solid $header-top-bg;
+  background-color: $header-top-bg;
   &:hover {
     transform: translateY(0px);
   }

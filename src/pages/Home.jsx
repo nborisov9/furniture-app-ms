@@ -25,13 +25,19 @@ export const Home = () => {
     dispatch(fetchChairs(category, sortBy))
   }, [category, sortBy, dispatch])
 
-  const onSelectsetCategory = React.useCallback((index) => {
-    dispatch(setCategory(index))
-  }, [])
+  const onSelectsetCategory = React.useCallback(
+    (index) => {
+      dispatch(setCategory(index))
+    },
+    [dispatch],
+  )
 
-  const onSelectSort = React.useCallback((type) => {
-    dispatch(setSortBy(type))
-  }, [])
+  const onSelectSort = React.useCallback(
+    (type) => {
+      dispatch(setSortBy(type))
+    },
+    [dispatch],
+  )
 
   const handleChairToCart = (obj) => {
     dispatch(addChairsToCart(obj))

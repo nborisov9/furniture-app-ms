@@ -1,3 +1,9 @@
+import { ADD_CHAIRS_CART } from '../action-types/cart'
+import { CLEAR_CART } from '../action-types/cart'
+import { REMOVE_CART_ITEM } from '../action-types/cart'
+import { MINUS_CART_ITEM } from '../action-types/cart'
+import { PLUS_CART_ITEM } from '../action-types/cart'
+
 const initialState = {
   items: {},
   totalPrice: 0,
@@ -22,7 +28,7 @@ const getTotalPrice = (arr) => arr.reduce((total, { price }) => total + price, 0
 
 export const cart = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_CHAIRS_CART': {
+    case ADD_CHAIRS_CART: {
       const currentChairsItems = !state.items[action.payload.id]
         ? [action.payload]
         : [...state.items[action.payload.id].items, action.payload]
@@ -46,11 +52,11 @@ export const cart = (state = initialState, action) => {
       }
     }
 
-    case 'CLEAR_CART': {
+    case CLEAR_CART: {
       return { items: {}, totalPrice: 0, totalCount: 0 }
     }
 
-    case 'REMOVE_CART_ITEM': {
+    case REMOVE_CART_ITEM: {
       const newItems = { ...state.items }
       const currentTotalPrice = newItems[action.payload].totalPrice
       const currentTotalCount = newItems[action.payload].items.length
@@ -64,7 +70,7 @@ export const cart = (state = initialState, action) => {
       }
     }
 
-    case 'PLUS_CART_ITEM': {
+    case PLUS_CART_ITEM: {
       const newObjItems = [
         ...state.items[action.payload].items,
         state.items[action.payload].items[0],
@@ -89,7 +95,7 @@ export const cart = (state = initialState, action) => {
       }
     }
 
-    case 'MINUS_CART_ITEM': {
+    case MINUS_CART_ITEM: {
       const oldItems = state.items[action.payload].items
       const newObjItems = oldItems.length > 1 ? oldItems.slice(1) : oldItems
 

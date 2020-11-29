@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { Button } from './Button'
-import line from '../assets/img/header/vertline.png'
+import { Button } from '../Button'
+import line from '../../assets/img/header/vertline.png'
 
 export const Header = () => {
   const { totalPrice, totalCount } = useSelector(({ cart }) => cart)

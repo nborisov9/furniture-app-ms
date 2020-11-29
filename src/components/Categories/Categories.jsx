@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Categories = ({ categoryNames, onClickCategories, activeCategories }) => {
+export const Categories = React.memo(({ categoryNames, onClickCategories, activeCategories }) => {
   return (
     <div className="content-top__categories categories">
       <ul className="categoris__list">
@@ -21,4 +21,4 @@ export const Categories = ({ categoryNames, onClickCategories, activeCategories 
       </ul>
     </div>
   )
-}
+})
