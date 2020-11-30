@@ -2,9 +2,24 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 
 import { plusCartItem, minusCartItem, removeCartItem } from '../../redux/actions/cart'
+import { ModalConfirm } from '../ModalConfirm'
 
 export const CartItems = ({ id, name, type, size, image, totalCountItem, totalPriceItem }) => {
   const dispatch = useDispatch()
+  const [visibleModal, setVisibleModal] = React.useState(false)
+
+  const closeModalConfirm = () => {
+    setVisibleModal(false)
+  }
+
+  const openModalConfirm = () => {
+    setVisibleModal(true)
+  }
+
+  const onClickClearItem = () => {
+    dispatch(removeCartItem(id))
+    setVisibleModal(false)
+  }
 
   const plusItemHandler = () => {
     dispatch(plusCartItem(id))
@@ -12,10 +27,6 @@ export const CartItems = ({ id, name, type, size, image, totalCountItem, totalPr
 
   const minusItemHandler = () => {
     dispatch(minusCartItem(id))
-  }
-
-  const removeItemHandler = () => {
-    dispatch(removeCartItem(id))
   }
 
   return (
@@ -46,9 +57,16 @@ export const CartItems = ({ id, name, type, size, image, totalCountItem, totalPr
           <i className="fas fa-ruble-sign"></i>
         </span>
       </div>
-      <div onClick={removeItemHandler} className="item-cart__close btn-cart-hover">
+      <div onClick={openModalConfirm} className="item-cart__close btn-cart-hover">
         <i className="far fa-times-circle"></i>
       </div>
+      {visibleModal && (
+        <ModalConfirm
+          question="Вы действительно хотите удалить данный товар?"
+          closeModalConfirm={closeModalConfirm}
+          onClickClearItems={onClickClearItem}
+        />
+      )}
     </div>
   )
 }

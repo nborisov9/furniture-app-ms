@@ -6,15 +6,25 @@ import { clearCart } from '../redux/actions/cart'
 import { Button } from '../components'
 import { CartItems } from '../components'
 import { CartEmpty } from '../components'
+import { ModalConfirm } from '../components'
 
 export const Cart = () => {
   const dispatch = useDispatch()
+  const [visibleModal, setVisibleModal] = React.useState(false)
   const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart)
-
   const addedChairs = Object.keys(items).map((id) => items[id].items[0])
+
+  const openModalConfirm = () => {
+    setVisibleModal(true)
+  }
 
   const onClickClearCart = () => {
     dispatch(clearCart())
+    setVisibleModal(false)
+  }
+
+  const closeModalConfirm = () => {
+    setVisibleModal(false)
   }
 
   return (
@@ -26,7 +36,7 @@ export const Cart = () => {
               <i className="fas fa-cart-arrow-down"></i>
               Корзина
             </div>
-            <div onClick={onClickClearCart} className="cart__clear btn-cart-hover">
+            <div onClick={openModalConfirm} className="cart__clear btn-cart-hover">
               <i className="far fa-trash-alt"></i>
               очистить корзину
             </div>
@@ -70,6 +80,13 @@ export const Cart = () => {
         </div>
       ) : (
         <CartEmpty />
+      )}
+      {visibleModal && (
+        <ModalConfirm
+          question="Вы действительно хотите очистить корзину?"
+          closeModalConfirm={closeModalConfirm}
+          onClickClearItems={onClickClearCart}
+        />
       )}
     </div>
   )
