@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 import { Button } from '../Button'
 
@@ -91,4 +92,22 @@ export const ChairsBlock = ({
       </div>
     </div>
   )
+}
+
+// name,
+// imageUrl,
+// price,
+// id,
+// types,
+// sizes,
+// onClickAddChair,
+// addChairsCount,
+
+ChairsBlock.propTypes = {
+  name: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  types: PropTypes.arrayOf(PropTypes.number).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
 }

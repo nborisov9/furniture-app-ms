@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export const ModalConfirm = ({ closeModalConfirm, onClickClearItems, question }) => {
+export const ModalConfirm = ({ closeModalConfirm, onClickClearItems, questionName }) => {
   return (
     <div className="modal-confirm-wrapper">
       <div className="modal-confirm">
         <div className="modal-confirm__header">
-          <div className="modal-confirm__title">{question}</div>
+          <div className="modal-confirm__title">{questionName}</div>
           <i onClick={closeModalConfirm} className="modal-confirm__close far fa-times-circle"></i>
         </div>
         <div className="modal-confirm__response">
@@ -19,4 +20,10 @@ export const ModalConfirm = ({ closeModalConfirm, onClickClearItems, question })
       </div>
     </div>
   )
+}
+
+ModalConfirm.propTypes = {
+  questionName: PropTypes.string.isRequired,
+  closeModalConfirm: PropTypes.func.isRequired,
+  onClickClearItems: PropTypes.func.isRequired,
 }

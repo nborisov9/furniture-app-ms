@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const SortPopup = React.memo(({ sortItems, onClickSortType }) => {
   const [visiblePopup, setVisiblePopup] = React.useState(false)
@@ -55,3 +56,8 @@ export const SortPopup = React.memo(({ sortItems, onClickSortType }) => {
     </div>
   )
 })
+
+SortPopup.propTypes = {
+  onClickSortType: PropTypes.func.isRequired,
+  sortItems: PropTypes.arrayOf(PropTypes.object).isRequired,
+}

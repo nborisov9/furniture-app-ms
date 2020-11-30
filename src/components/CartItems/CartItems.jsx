@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { plusCartItem, minusCartItem, removeCartItem } from '../../redux/actions/cart'
 import { ModalConfirm } from '../ModalConfirm'
@@ -62,11 +63,20 @@ export const CartItems = ({ id, name, type, size, image, totalCountItem, totalPr
       </div>
       {visibleModal && (
         <ModalConfirm
-          question="Вы действительно хотите удалить данный товар?"
+          questionName="Вы действительно хотите удалить данный товар?"
           closeModalConfirm={closeModalConfirm}
           onClickClearItems={onClickClearItem}
         />
       )}
     </div>
   )
+}
+
+CartItems.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  totalCountItem: PropTypes.number.isRequired,
 }

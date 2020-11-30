@@ -83,7 +83,7 @@ export const Cart = () => {
       )}
       {visibleModal && (
         <ModalConfirm
-          question="Вы действительно хотите очистить корзину?"
+          questionName="Вы действительно хотите очистить корзину?"
           closeModalConfirm={closeModalConfirm}
           onClickClearItems={onClickClearCart}
         />

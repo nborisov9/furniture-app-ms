@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const Categories = React.memo(({ categoryNames, onClickCategories, activeCategories }) => {
   return (
@@ -22,3 +23,8 @@ export const Categories = React.memo(({ categoryNames, onClickCategories, active
     </div>
   )
 })
+
+Categories.propTypes = {
+  onClickCategories: PropTypes.func.isRequired,
+  categoryNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
