@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 import { Button } from '../Button'
+import { InputToggle } from '../InputToggle'
 import line from '../../assets/img/header/vertline.png'
 
 export const Header = () => {
@@ -44,7 +45,9 @@ export const Header = () => {
                 <div className="bottom-header__logo">Furniture Store</div>
               </Link>
               <div className="header-vertical-line"></div>
-              <div className="header-qoute">лучшая мебель во вселенной</div>
+              <div className="header-button-toggle">
+                <InputToggle />
+              </div>
             </div>
             <div className="bottom-header__cart">
               <Link to="/cart">
@@ -55,7 +58,7 @@ export const Header = () => {
                   </div>
                   <img src={line} alt="" />
                   <div className="button-cart-icon">
-                    <i className="fas fa-shopping-basket"></i>
+                    <i className="fas fa-shopping-cart"></i>
                     <span>{totalCount}</span>
                   </div>
                 </Button>

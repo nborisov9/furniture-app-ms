@@ -21,10 +21,14 @@ li {
 
 .wrapper {
   width: 100%;
-  min-height: 100%;
-  // overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: all 0.2s linear;
+  min-height: 100vh;
+}
+
+.wrapper-dark-theme {
+  @include wrapper-dark-theme;
 }
 
 .container {
@@ -34,17 +38,6 @@ li {
   @media (max-width: $md1) {
     max-width: 1050px; // * temporarily
   }
-
-  // @media (max-width: $md1) {
-  //   max-width: 970px;
-  // }
-  // @media (max-width: $md2) {
-  //   max-width: 750px;
-  // }
-  // @media (max-width: $md3) {
-  //   max-width: none;
-  //   padding: 0 10px;
-  // }
 }
 
 .content {

@@ -47,7 +47,7 @@ export const CartItems = ({ id, name, type, size, image, totalCountItem, totalPr
         </div>
       </div>
 
-      <div className="item-cart__arrow">
+      <div className="item-cart__count">
         <i onClick={minusItemHandler} className="fas fa-minus btn-cart-hover"></i>
         <span>{totalCountItem}</span>
         <i onClick={plusItemHandler} className="fas fa-plus btn-cart-hover"></i>

@@ -24,6 +24,10 @@
   }
   // .cart__clear
   &__clear {
+    transition: color 0.1s linear;
+    &:hover {
+      color: rgb(255, 96, 96);
+    }
     cursor: pointer;
     color: gray;
     text-transform: uppercase;
@@ -76,6 +80,7 @@
 
   // .item-cart__image
   &__info {
+    min-width: 342px;
     align-items: center;
     display: flex;
     img {
@@ -98,8 +103,8 @@
   &__details {
     margin: 10px 0px 0px 0px;
   }
-  // .item-cart__arrow
-  &__arrow {
+  // .item-cart__count
+  &__count {
     display: flex;
     align-items: center;
     span {
@@ -120,6 +125,11 @@
       &:last-child {
         margin: 0px 0px 0px 15px;
       }
+      transition: color, border-color 0.1s linear;
+      &:hover {
+        color: rgb(0, 131, 207);
+        border-color: rgb(0, 131, 207);
+      }
     }
   }
   // .item-cart__price
@@ -137,6 +147,10 @@
     cursor: pointer;
     font-size: 35px;
     color: rgba(255, 122, 122, 0.6);
+    transition: color 0.1s linear;
+    &:hover {
+      color: rgb(255, 96, 96);
+    }
   }
 }
 

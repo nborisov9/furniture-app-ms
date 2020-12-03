@@ -1,32 +1,5 @@
 @import '../variables';
-
-@mixin response-btn {
-  color: $white;
-  background-color: $blue;
-  cursor: pointer;
-  width: 95px;
-  height: 40px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 22px;
-  font-family: 'Ubuntu';
-  transition: background-color 0.2s linear;
-  @media (min-width: 992px) {
-    &:hover {
-      &:hover {
-        transform: translateY(0px);
-      }
-
-      &:active {
-        transform: translateY(2px);
-      }
-    }
-  }
-}
+@import '../mixins';
 
 .modal-confirm-wrapper {
   position: fixed;
@@ -72,20 +45,12 @@
 
   // .modal-confirm_yes
   &_yes {
-    @include response-btn;
-    background-color: #4db645d0;
-    &:hover {
-      background-color: rgba(77, 182, 69, 0.932);
-    }
+    @include modal-response-btn;
   }
   // .modal-confirm_no
   &_no {
-    @include response-btn;
-    margin: 0px 0px 0px 20px;
-    background-color: #f31e137a;
-    &:hover {
-      background-color: #f31e1393;
-    }
+    @include modal-response-btn;
+    margin: 0px 0px 0px 30px;
   }
   // .modal-confirm__title
   &__title {

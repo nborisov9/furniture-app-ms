@@ -59,15 +59,15 @@
 
   i {
     margin: 0px 10px 0px 0px;
-    font-size: 15px;
+    font-size: 20px;
   }
   span {
     font-size: 17px;
     margin: 0px 0px 0px 10px;
     background-color: $blue;
     border-radius: 50%;
+    padding: 2px 7px;
     color: $white;
-    padding: 2px 8px 2px 7px;
   }
 
   @media (min-width: 992px) {
@@ -100,6 +100,10 @@
   i {
     margin: 0px 10px 0px 0px;
     transform: translate(0px, 1px);
+    color: $black;
+    @media (min-width: 992px) {
+      animation: arrow 1.5s ease-in-out infinite;
+    }
   }
   color: rgb(160, 160, 160);
   font-size: 18px;
@@ -128,7 +132,17 @@
     color: $white;
     font-size: 20px;
   }
-  padding: 14px 23px;
+  i {
+    margin: 0px 10px 0px 0px;
+    transform: translate(0px, 1px);
+    color: $white;
+    font-size: 18px;
+
+    @media (min-width: 992px) {
+      animation: arrow 1.5s ease-in-out infinite;
+    }
+  }
+  padding: 14px 24px;
   border-radius: 30px;
   border: 1px solid $header-top-bg;
   background-color: $header-top-bg;
@@ -137,5 +151,17 @@
   }
   &:active {
     transform: translateY(2px);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translate(0px, 1px);
+  }
+  50% {
+    transform: translate(-10px, 1px);
+  }
+  100% {
+    transform: translate(0px, 1px);
   }
 }

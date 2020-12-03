@@ -84,7 +84,7 @@ export const ChairsBlock = ({
             от <span>{price} ₽</span>
           </div>
           <Button onClick={onAddChairToCart} className="button-count" outline>
-            <i className="fas fa-plus"></i>
+            <i className="fas fa-cart-plus"></i>
             Добавить
             {addChairsCount && <span>{addChairsCount}</span>}
           </Button>
@@ -93,15 +93,6 @@ export const ChairsBlock = ({
     </div>
   )
 }
-
-// name,
-// imageUrl,
-// price,
-// id,
-// types,
-// sizes,
-// onClickAddChair,
-// addChairsCount,
 
 ChairsBlock.propTypes = {
   name: PropTypes.string.isRequired,

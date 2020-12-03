@@ -69,7 +69,7 @@ export const Cart = () => {
           <div className="cart__bottom">
             <Link to="/">
               <Button className="btn-exit btn-cart-hover">
-                <i className="fas fa-angle-left"></i>
+                <i className="fas fa-arrow-left"></i>
                 Вeрнуться назад
               </Button>
             </Link>

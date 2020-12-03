@@ -14,6 +14,7 @@ export const CartEmpty = () => {
       <div className="cart-empty__image"></div>
       <Link to="/">
         <Button className="button-cart-emty">
+          <i className="fas fa-arrow-left"></i>
           <span>Вернуться к покупкам</span>
         </Button>
       </Link>

@@ -8,7 +8,7 @@ import { addChairsToCart } from '../redux/actions/cart'
 
 const categoryNames = ['Кресла', 'Барные', 'Табуреты', 'Для кафе', 'Для кухни']
 const sortItems = [
-  { name: 'популярности', type: 'rating', order: 'desc' },
+  { name: 'по рейтингу', type: 'rating', order: 'desc' },
   { name: 'цене', type: 'price', order: 'asc' },
   { name: 'алфавиту', type: 'alphabet', order: 'asc' },
 ]
