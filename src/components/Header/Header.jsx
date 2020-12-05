@@ -4,10 +4,12 @@ import { useSelector } from 'react-redux'
 
 import { Button } from '../Button'
 import { InputToggle } from '../InputToggle'
+import { useThemeContext } from '../../utils'
 import line from '../../assets/img/header/vertline.png'
 
 export const Header = () => {
   const { totalPrice, totalCount } = useSelector(({ cart }) => cart)
+  const { theme, toggleThemeHandler } = useThemeContext()
 
   return (
     <header>
@@ -46,7 +48,12 @@ export const Header = () => {
               </Link>
               <div className="header-vertical-line"></div>
               <div className="header-button-toggle">
-                <InputToggle />
+                {theme ? (
+                  <span className="header-button-toggle__light">Light theme</span>
+                ) : (
+                  <span className="header-button-toggle__dark">Night theme</span>
+                )}
+                <InputToggle onClick={toggleThemeHandler} theme={theme} />
               </div>
             </div>
             <div className="bottom-header__cart">

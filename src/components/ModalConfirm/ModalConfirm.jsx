@@ -2,8 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const ModalConfirm = ({ closeModalConfirm, onClickClearItems, questionName }) => {
+  const modalWrapperRef = React.useRef()
+
+  const outsideClickHandler = (event) => {
+    if (event.target === modalWrapperRef.current) {
+      closeModalConfirm()
+    }
+  }
+
   return (
-    <div className="modal-confirm-wrapper">
+    <div
+      className="modal-confirm-wrapper"
+      ref={modalWrapperRef}
+      onClick={(event) => outsideClickHandler(event)}>
       <div className="modal-confirm">
         <div className="modal-confirm__header">
           <div className="modal-confirm__title">{questionName}</div>

@@ -169,8 +169,24 @@
 }
 
 .header-button-toggle {
+  display: flex;
+  flex-direction: column;
   margin: 0px 0px 0px 20px;
-  color: rgba(117, 117, 117, 0.726);
+  align-items: center;
+}
+
+.header-button-toggle__light {
+  margin: 0px 0px 5px 0px;
+  font-weight: 600;
+  color: $black;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+}
+
+.header-button-toggle__dark {
+  margin: 0px 0px 5px 0px;
+  font-weight: 600;
+  color: $white;
   font-family: 'Open Sans';
   text-transform: uppercase;
 }
