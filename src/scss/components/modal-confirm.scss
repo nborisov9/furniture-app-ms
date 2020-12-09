@@ -16,7 +16,7 @@
 
 .modal-confirm {
   margin: 0px auto 0px auto;
-  background-color: rgb(255, 255, 255);
+  background: $white;
   width: 770px;
   height: 170px;
   border-radius: 20px;
@@ -32,7 +32,6 @@
     margin: 20px 0px 0px 0px;
     position: relative;
   }
-
   &__close {
     cursor: pointer;
     position: absolute;
@@ -41,24 +40,19 @@
     color: rgba(255, 60, 60, 0.8);
     font-size: 30px;
   }
-
-  // .modal-confirm_yes
   &_yes {
     @include modal-response-btn;
   }
-  // .modal-confirm_no
   &_no {
     @include modal-response-btn;
     margin: 0px 0px 0px 30px;
   }
-  // .modal-confirm__title
   &__title {
     font-size: 25px;
     font-weight: 600;
     text-align: center;
     margin: 20px 0px 0px 0px;
   }
-
   &__response {
     font-size: 20px;
     display: flex;

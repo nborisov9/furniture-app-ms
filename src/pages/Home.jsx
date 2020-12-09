@@ -1,47 +1,52 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
-import { Categories, ChairsBlock, SortPopup, LoadingBlock } from '../components'
-import { fetchChairs } from '../redux/actions/chairs'
-import { setSortBy, setCategory } from '../redux/actions/filters'
-import { addChairsToCart } from '../redux/actions/cart'
+import { Categories, ChairsBlock, SortPopup, LoadingBlock } from '../components';
+import { fetchChairs } from '../redux/actions/chairs';
+import { setSortBy, setCategory } from '../redux/actions/filters';
+import { addChairsToCart } from '../redux/actions/cart';
 
-const categoryNames = ['Кресла', 'Барные', 'Табуреты', 'Для кафе', 'Для кухни']
+const categoryNames = ['Кресла', 'Барные', 'Табуреты', 'Для кафе', 'Для кухни'];
 const sortItems = [
   { name: 'по рейтингу', type: 'rating', order: 'desc' },
   { name: 'цене', type: 'price', order: 'asc' },
   { name: 'алфавиту', type: 'alphabet', order: 'asc' },
-]
+];
 
 export const Home = () => {
-  const dispatch = useDispatch()
-
-  const items = useSelector(({ chairs }) => chairs.items)
-  const isLoaded = useSelector(({ chairs }) => chairs.isLoaded)
-  const chairsCount = useSelector(({ cart }) => cart.items)
-  const { category, sortBy } = useSelector(({ filters }) => filters)
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const items = useSelector(({ chairs }) => chairs.items);
+  const isLoaded = useSelector(({ chairs }) => chairs.isLoaded);
+  const chairsCount = useSelector(({ cart }) => cart.items);
+  const { category, sortBy } = useSelector(({ filters }) => filters);
 
   React.useEffect(() => {
-    dispatch(fetchChairs(category, sortBy))
-  }, [category, sortBy, dispatch])
+    dispatch(fetchChairs(category, sortBy));
+  }, [category, sortBy, dispatch]);
 
   const onSelectsetCategory = React.useCallback(
     (index) => {
-      dispatch(setCategory(index))
+      dispatch(setCategory(index));
     },
     [dispatch],
-  )
+  );
 
   const onSelectSort = React.useCallback(
     (type) => {
-      dispatch(setSortBy(type))
+      dispatch(setSortBy(type));
     },
     [dispatch],
-  )
+  );
 
   const handleChairToCart = (obj) => {
-    dispatch(addChairsToCart(obj))
-  }
+    dispatch(addChairsToCart(obj));
+  };
+
+  const getCurrentIdChair = (id) => {
+    history.push(`/chair/${id}`);
+  };
 
   return (
     <div className="container">
@@ -60,6 +65,7 @@ export const Home = () => {
             ? items &&
               items.map((obj) => (
                 <ChairsBlock
+                  onClickGetChairId={getCurrentIdChair}
                   onClickAddChair={handleChairToCart}
                   addChairsCount={chairsCount[obj.id] && chairsCount[obj.id].items.length}
                   key={`${obj.id}_${obj.name}`}
@@ -72,5 +78,5 @@ export const Home = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

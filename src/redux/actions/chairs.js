@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios from 'axios';
 
-import { SET_CHAIRS } from '../action-types/chairs'
-import { SET_LOADED } from '../action-types/chairs'
+import { SET_CHAIRS } from '../action-types/chairs';
+import { SET_LOADED } from '../action-types/chairs';
 
 export const fetchChairs = (category, sortBy) => (dispatch) => {
   axios
@@ -12,15 +12,15 @@ export const fetchChairs = (category, sortBy) => (dispatch) => {
 		&_sort=${sortBy.type}&_order=${sortBy.order}
 		`,
     )
-    .then(({ data }) => dispatch(setChairs(data)))
-}
+    .then(({ data }) => dispatch(setChairs(data)));
+};
 
 export const setChairs = (items) => ({
   type: SET_CHAIRS,
   payload: items,
-})
+});
 
 export const setLoaded = (payload) => ({
   type: SET_LOADED,
   payload,
-})
+});

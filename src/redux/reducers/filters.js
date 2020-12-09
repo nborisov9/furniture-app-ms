@@ -1,5 +1,5 @@
-import { SET_SORT_BY } from '../action-types/filters'
-import { SET_CATEGORY } from '../action-types/filters'
+import { SET_SORT_BY } from '../action-types/filters';
+import { SET_CATEGORY } from '../action-types/filters';
 
 const initialState = {
   category: null,
@@ -7,7 +7,7 @@ const initialState = {
     type: 'rating',
     order: 'desc',
   },
-}
+};
 
 export const filters = (state = initialState, action) => {
   switch (action.type) {
@@ -15,15 +15,15 @@ export const filters = (state = initialState, action) => {
       return {
         ...state,
         sortBy: action.payload,
-      }
+      };
 
     case SET_CATEGORY:
       return {
         ...state,
         category: action.payload,
-      }
+      };
 
     default:
-      return state
+      return state;
   }
-}
+};

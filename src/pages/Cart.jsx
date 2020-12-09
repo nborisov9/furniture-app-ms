@@ -1,31 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { clearCart } from '../redux/actions/cart'
-import { Button } from '../components'
-import { CartItems } from '../components'
-import { CartEmpty } from '../components'
-import { ModalConfirm } from '../components'
+import { clearCart } from '../redux/actions/cart';
+import { Button } from '../components';
+import { CartItems } from '../components';
+import { CartEmpty } from '../components';
+import { ModalConfirm } from '../components';
 
 export const Cart = () => {
-  const dispatch = useDispatch()
-  const [visibleModal, setVisibleModal] = React.useState(false)
-  const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart)
-  const addedChairs = Object.keys(items).map((id) => items[id].items[0])
+  const dispatch = useDispatch();
+  const [visibleModal, setVisibleModal] = React.useState(false);
+  const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
+  const addedChairs = Object.keys(items).map((id) => items[id].items[0]);
 
   const openModalConfirm = () => {
-    setVisibleModal(true)
-  }
+    setVisibleModal(true);
+  };
 
   const onClickClearCart = () => {
-    dispatch(clearCart())
-    setVisibleModal(false)
-  }
+    dispatch(clearCart());
+    setVisibleModal(false);
+  };
 
   const closeModalConfirm = () => {
-    setVisibleModal(false)
-  }
+    setVisibleModal(false);
+  };
 
   return (
     <div className="wrapper-cart">
@@ -89,5 +89,5 @@ export const Cart = () => {
         />
       )}
     </div>
-  )
-}
+  );
+};

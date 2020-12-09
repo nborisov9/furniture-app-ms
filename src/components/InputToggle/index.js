@@ -1,3 +1,3 @@
-import { InputToggle } from './InputToggle'
+import { InputToggle } from './InputToggle';
 
-export { InputToggle }
+export { InputToggle };

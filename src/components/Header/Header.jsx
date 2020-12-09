@@ -1,15 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import { Button } from '../Button'
-import { InputToggle } from '../InputToggle'
-import { useThemeContext } from '../../utils'
-import line from '../../assets/img/header/vertline.png'
+import { Button } from '../Button';
+import { InputToggle } from '../InputToggle';
+import { useThemeContext } from '../../utils';
+import line from '../../assets/img/header/vertline.png';
 
 export const Header = () => {
-  const { totalPrice, totalCount } = useSelector(({ cart }) => cart)
-  const { theme, toggleThemeHandler } = useThemeContext()
+  const { totalPrice, totalCount } = useSelector(({ cart }) => cart);
+  const { theme, toggleThemeHandler } = useThemeContext();
 
   return (
     <header>
@@ -51,7 +51,7 @@ export const Header = () => {
                 {theme ? (
                   <span className="header-button-toggle__light">Light theme</span>
                 ) : (
-                  <span className="header-button-toggle__dark">Night theme</span>
+                  <span className="header-button-toggle__dark">Dark theme</span>
                 )}
                 <InputToggle onClick={toggleThemeHandler} theme={theme} />
               </div>
@@ -75,5 +75,5 @@ export const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};

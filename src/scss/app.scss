@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
 
@@ -36,7 +36,7 @@ li {
   margin: 0 auto;
 
   @media (max-width: $md1) {
-    max-width: 1050px; // * temporarily
+    max-width: 1050px;
   }
 }
 

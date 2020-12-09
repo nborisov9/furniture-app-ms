@@ -6,7 +6,6 @@
 }
 
 .cart {
-  // .cart__top
   &__top {
     padding: 80px 0px 30px 0px;
     display: flex;
@@ -14,7 +13,6 @@
     justify-content: space-between;
     border-bottom: 1px solid rgba(212, 212, 212, 0.363);
   }
-  // .cart__title
   &__title {
     font-size: 35px;
     font-weight: 600;
@@ -22,7 +20,6 @@
       margin: 0px 10px 0px 0px;
     }
   }
-  // .cart__clear
   &__clear {
     transition: color 0.1s linear;
     &:hover {
@@ -35,21 +32,11 @@
       margin: 0px 5px 0px 0px;
     }
   }
-  // .cart__item
-  &__item {
-  }
-  // .cart__result
-  &__result {
-  }
-  // .cart__bottom
   &__bottom {
     margin: 30px 0px 150px 0px;
     display: flex;
     justify-content: space-between;
   }
-}
-
-.btn-pay {
 }
 
 .item-cart {
@@ -58,7 +45,6 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(212, 212, 212, 0.363);
-
   &__type {
     font-size: 18px;
     color: gray;
@@ -67,7 +53,6 @@
       font-weight: 600;
     }
   }
-
   &__size {
     color: gray;
     font-size: 18px;
@@ -77,8 +62,6 @@
       font-weight: 600;
     }
   }
-
-  // .item-cart__image
   &__info {
     min-width: 342px;
     align-items: center;
@@ -89,21 +72,16 @@
       width: 150px;
     }
   }
-
   &__body {
     margin: 0px 0px 0px 20px;
   }
-
-  // .item-cart__name
   &__name {
     font-weight: 600;
     font-size: 27px;
   }
-  // .item-cart__details
   &__details {
     margin: 10px 0px 0px 0px;
   }
-  // .item-cart__count
   &__count {
     display: flex;
     align-items: center;
@@ -132,7 +110,6 @@
       }
     }
   }
-  // .item-cart__price
   &__price {
     font-size: 25px;
     font-weight: 600;
@@ -142,7 +119,6 @@
       transform: translate(0px, -1px);
     }
   }
-  // .item-cart__close
   &__close {
     cursor: pointer;
     font-size: 35px;
@@ -153,12 +129,10 @@
     }
   }
 }
-
 .result-cart {
   margin: 30px 0px 0px 0px;
   display: flex;
   justify-content: space-between;
-  // .result-cart__length
   &__length {
     font-size: 27px;
     span {
@@ -170,7 +144,6 @@
       font-size: 20px;
     }
   }
-  // .result-cart__total
   &__total {
     font-size: 27px;
     span {
@@ -184,23 +157,19 @@
     }
   }
 }
-
 .cart-empty {
   padding: 80px 0px 0px 0px;
   text-align: center;
 
-  // .cart-empty__title
   &__title {
     font-weight: 600;
     font-size: 30px;
   }
-  // .cart-empty__text
   &__text {
     padding: 20px 0px 0px 0px;
     font-size: 20px;
     line-height: 30px;
   }
-  // .cart-empty__image
   &__image {
     img {
       height: 500px;

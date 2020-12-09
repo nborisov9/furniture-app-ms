@@ -1,12 +1,13 @@
-import { Header } from './Header'
-import { Button } from './Button'
-import { ChairsBlock } from './ChairsBlock'
-import { Categories } from './Categories'
-import { SortPopup } from './SortPopup'
-import { LoadingBlock } from './LoadingBlock'
-import { CartItems } from './CartItems'
-import { CartEmpty } from './CartEmpty'
-import { ModalConfirm } from './ModalConfirm'
+import { Header } from './Header';
+import { Button } from './Button';
+import { ChairsBlock } from './ChairsBlock';
+import { Categories } from './Categories';
+import { SortPopup } from './SortPopup';
+import { LoadingBlock } from './LoadingBlock';
+import { CartItems } from './CartItems';
+import { CartEmpty } from './CartEmpty';
+import { ModalConfirm } from './ModalConfirm';
+import { ChairDetails } from './ChairDetails';
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   CartItems,
   CartEmpty,
   ModalConfirm,
-}
+  ChairDetails,
+};

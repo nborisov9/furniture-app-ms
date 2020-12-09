@@ -1,3 +1,3 @@
-import { ModalConfirm } from './ModalConfirm'
+import { ModalConfirm } from './ModalConfirm';
 
-export { ModalConfirm }
+export { ModalConfirm };

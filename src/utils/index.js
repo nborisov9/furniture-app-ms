@@ -1,2 +1,2 @@
-import { ThemeContext, useThemeContext, initialStateTheme } from './utils'
-export { ThemeContext, useThemeContext, initialStateTheme }
+import { ThemeContext, useThemeContext, initialStateTheme } from './ThemeContext';
+export { ThemeContext, useThemeContext, initialStateTheme };

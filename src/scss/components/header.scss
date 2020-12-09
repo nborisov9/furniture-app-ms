@@ -1,12 +1,10 @@
 @import '../variables';
 
 .header {
-  // .header__top
   &__top {
     @media (max-width: 1225px) {
       padding: 0px 10px;
     }
-    // background: #ffdf8c;
     background: $header-top-bg;
     height: 32px;
     width: 100%;
@@ -25,7 +23,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  // .top-header__list
   &__list {
     color: $white;
     display: flex;
@@ -61,10 +58,8 @@
       }
     }
   }
-  // .top-header__link
   &__link {
   }
-  // .top-header__social
   &__social {
     display: flex;
     align-items: center;
@@ -144,15 +139,11 @@
     margin: 0 auto;
   }
 
-  // .bottom-header__logo
   &__logo {
     font-family: 'Meie Script', cursive;
     font-size: 50px;
     letter-spacing: -5px;
     color: #000;
-  }
-  // .bottom-header__cart
-  &__cart {
   }
 }
 
@@ -181,6 +172,8 @@
   color: $black;
   font-family: 'Open Sans';
   text-transform: uppercase;
+  width: 95px;
+  text-align: center;
 }
 
 .header-button-toggle__dark {
@@ -189,4 +182,6 @@
   color: $white;
   font-family: 'Open Sans';
   text-transform: uppercase;
+  width: 95px;
+  text-align: center;
 }

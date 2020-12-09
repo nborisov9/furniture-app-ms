@@ -1,3 +1,3 @@
-import { LoadingBlock } from './LoadingBlock'
+import { LoadingBlock } from './LoadingBlock';
 
-export { LoadingBlock }
+export { LoadingBlock };

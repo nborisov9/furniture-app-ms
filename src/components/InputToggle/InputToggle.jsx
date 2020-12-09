@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const InputToggle = ({ onClick, theme }) => {
   return (
@@ -8,5 +8,5 @@ export const InputToggle = ({ onClick, theme }) => {
         htmlFor="bopis"
         className={theme ? 'on-off-toggle-theme__light' : 'on-off-toggle-theme__dark'}></label>
     </div>
-  )
-}
+  );
+};

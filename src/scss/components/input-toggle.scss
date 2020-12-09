@@ -12,9 +12,8 @@
   height: 24px;
   display: block;
   border-radius: 34px;
-  background-color: $header-top-bg; //
+  background-color: $header-top-bg;
   transition: background-color 0.4s;
-
   cursor: pointer;
 
   &:before {
@@ -53,7 +52,6 @@
   border-radius: 34px;
   background-color: #d8d8d8; //
   transition: background-color 0.4s;
-
   cursor: pointer;
 
   &:before {
@@ -73,12 +71,12 @@
   }
 
   &:after {
+    content: '';
     display: block;
     line-height: 24px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
-    content: '';
     color: #484848;
     padding-left: 26px;
     transition: all 0.4s;

@@ -1,5 +1,5 @@
-import React from 'react'
-import ContentLoader from 'react-content-loader'
+import React from 'react';
+import ContentLoader from 'react-content-loader';
 
 export const LoadingBlock = () => {
   return (
@@ -22,5 +22,5 @@ export const LoadingBlock = () => {
         <rect x="281" y="542" rx="0" ry="0" width="4" height="3" />
       </ContentLoader>
     </div>
-  )
-}
+  );
+};

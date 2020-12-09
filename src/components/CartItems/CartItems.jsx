@@ -1,34 +1,34 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import { plusCartItem, minusCartItem, removeCartItem } from '../../redux/actions/cart'
-import { ModalConfirm } from '../ModalConfirm'
+import { plusCartItem, minusCartItem, removeCartItem } from '../../redux/actions/cart';
+import { ModalConfirm } from '../ModalConfirm';
 
 export const CartItems = ({ id, name, type, size, image, totalCountItem, totalPriceItem }) => {
-  const dispatch = useDispatch()
-  const [visibleModal, setVisibleModal] = React.useState(false)
+  const dispatch = useDispatch();
+  const [visibleModal, setVisibleModal] = React.useState(false);
 
   const closeModalConfirm = () => {
-    setVisibleModal(false)
-  }
+    setVisibleModal(false);
+  };
 
   const openModalConfirm = () => {
-    setVisibleModal(true)
-  }
+    setVisibleModal(true);
+  };
 
   const onClickClearItem = () => {
-    dispatch(removeCartItem(id))
-    setVisibleModal(false)
-  }
+    dispatch(removeCartItem(id));
+    setVisibleModal(false);
+  };
 
   const plusItemHandler = () => {
-    dispatch(plusCartItem(id))
-  }
+    dispatch(plusCartItem(id));
+  };
 
   const minusItemHandler = () => {
-    dispatch(minusCartItem(id))
-  }
+    dispatch(minusCartItem(id));
+  };
 
   return (
     <div className="cart__item item-cart">
@@ -69,8 +69,8 @@ export const CartItems = ({ id, name, type, size, image, totalCountItem, totalPr
         />
       )}
     </div>
-  )
-}
+  );
+};
 
 CartItems.propTypes = {
   id: PropTypes.number.isRequired,
@@ -79,4 +79,4 @@ CartItems.propTypes = {
   size: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   totalCountItem: PropTypes.number.isRequired,
-}
+};

@@ -1,29 +1,33 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
+import React from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
-import { Header } from './components'
-import { Home, Cart } from './pages'
-import { ThemeContext } from './utils'
-import { initialStateTheme } from './utils'
+import { ChairDetails, Header } from './components';
+import { Home, Cart } from './pages';
+import { ThemeContext } from './utils';
+import { initialStateTheme } from './utils';
 
 const App = () => {
-  const [theme, setTheme] = React.useState(initialStateTheme)
+  const [theme, setTheme] = React.useState(initialStateTheme);
   const toggleThemeHandler = () => {
-    localStorage.setItem('light-theme', !theme)
-    setTheme((prev) => !prev)
-  }
+    localStorage.setItem('light-theme', !theme);
+    setTheme((prev) => !prev);
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleThemeHandler }}>
       <div className={theme ? 'wrapper' : 'wrapper-dark-theme'}>
         <Header />
         <div className="content">
-          <Route path="/" component={Home} exact />
-          <Route path="/cart" component={Cart} exact />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/chair/:id" component={ChairDetails} />
+            <Redirect to="/" />
+          </Switch>
         </div>
       </div>
     </ThemeContext.Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

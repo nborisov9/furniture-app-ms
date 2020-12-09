@@ -1,33 +1,33 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export const SortPopup = React.memo(({ sortItems, onClickSortType }) => {
-  const [visiblePopup, setVisiblePopup] = React.useState(false)
-  const [activeItem, setActiveItem] = React.useState(sortItems[0].name)
-  const activeLabel = activeItem
-  const sortRef = React.useRef()
+  const [visiblePopup, setVisiblePopup] = React.useState(false);
+  const [activeItem, setActiveItem] = React.useState(sortItems[0].name);
+  const activeLabel = activeItem;
+  const sortRef = React.useRef();
 
   const toggleVisiblePopup = () => {
-    setVisiblePopup(!visiblePopup)
-  }
+    setVisiblePopup(!visiblePopup);
+  };
 
   const hadnleOutsideClick = (event) => {
-    const path = event.path || (event.composedPath && event.composedPath())
+    const path = event.path || (event.composedPath && event.composedPath());
     if (!path.includes(sortRef.current)) {
-      setVisiblePopup(false)
+      setVisiblePopup(false);
     }
-  }
+  };
 
   const onSelectItem = (obj) => {
-    setActiveItem(obj.name)
-    onClickSortType(obj)
-    setVisiblePopup(false)
-  }
+    setActiveItem(obj.name);
+    onClickSortType(obj);
+    setVisiblePopup(false);
+  };
 
   React.useEffect(() => {
-    document.body.addEventListener('click', hadnleOutsideClick)
-    return () => document.body.removeEventListener('click', hadnleOutsideClick)
-  }, [])
+    document.body.addEventListener('click', hadnleOutsideClick);
+    return () => document.body.removeEventListener('click', hadnleOutsideClick);
+  }, []);
 
   return (
     <div ref={sortRef} className="content-top__sort sort">
@@ -54,10 +54,10 @@ export const SortPopup = React.memo(({ sortItems, onClickSortType }) => {
         </div>
       )}
     </div>
-  )
-})
+  );
+});
 
 SortPopup.propTypes = {
   onClickSortType: PropTypes.func.isRequired,
   sortItems: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
+};

@@ -1,13 +1,13 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import { chairs } from './chairs'
-import { filters } from './filters'
-import { cart } from './cart'
+import { chairs } from './chairs';
+import { filters } from './filters';
+import { cart } from './cart';
 
 const rootReducer = combineReducers({
   chairs,
   filters,
   cart,
-})
+});
 
-export { rootReducer, filters }
+export { rootReducer, filters };

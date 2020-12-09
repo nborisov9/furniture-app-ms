@@ -1,2 +1,2 @@
-import { CartEmpty } from './CartEmpty'
-export { CartEmpty }
+import { CartEmpty } from './CartEmpty';
+export { CartEmpty };

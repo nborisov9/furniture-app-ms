@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export const ModalConfirm = ({ closeModalConfirm, onClickClearItems, questionName }) => {
-  const modalWrapperRef = React.useRef()
+  const modalWrapperRef = React.useRef();
 
   const outsideClickHandler = (event) => {
     if (event.target === modalWrapperRef.current) {
-      closeModalConfirm()
+      closeModalConfirm();
     }
-  }
+  };
 
   return (
     <div
@@ -30,11 +30,11 @@ export const ModalConfirm = ({ closeModalConfirm, onClickClearItems, questionNam
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 ModalConfirm.propTypes = {
   questionName: PropTypes.string.isRequired,
   closeModalConfirm: PropTypes.func.isRequired,
   onClickClearItems: PropTypes.func.isRequired,
-}
+};

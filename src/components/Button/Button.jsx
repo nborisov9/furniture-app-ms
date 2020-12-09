@@ -1,9 +1,8 @@
-import React from 'react'
-import classNames from 'classnames'
+import React from 'react';
+import classNames from 'classnames';
 
 export const Button = (props) => {
-  // button outline: true || false
-  const { outline, children: content, className, onClick } = props
+  const { outline, children: content, className, onClick } = props;
 
   return (
     <button
@@ -13,5 +12,5 @@ export const Button = (props) => {
       onClick={onClick}>
       {content}
     </button>
-  )
-}
+  );
+};

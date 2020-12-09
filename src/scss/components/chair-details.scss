@@ -1,0 +1,87 @@
+@import '../variables';
+
+.chair-details {
+  padding: 60px 0px 0px 0px;
+  &__row {
+    display: flex;
+  }
+  &__column {
+    &:last-child {
+      width: 100%;
+    }
+  }
+  &__image {
+    img {
+      height: 400px;
+      width: 420px;
+      border-radius: 30px;
+    }
+  }
+  &__body {
+  }
+}
+.chair-details-body {
+  margin: 0px 0px 0px 50px;
+  font-weight: 600;
+  &__name {
+    font-size: 32px;
+    padding: 15px 0px;
+    border-bottom: 1px solid $gray-light;
+  }
+  &__price {
+    margin: 10px 0px 0px 0px;
+    font-size: 21px;
+    padding: 15px 0px;
+    border-bottom: 1px solid $gray-light;
+    span {
+      font-weight: 600;
+      margin: 0px 0px 0px 7px;
+    }
+    i {
+      transform: translate(0px, -1px);
+      margin: 0px 0px 0px 5px;
+      font-size: 18px;
+    }
+  }
+  &__description {
+    line-height: 25px;
+    border-bottom: 1px solid $gray-light;
+    padding: 15px 0px;
+    font-size: 21px;
+    .chair-description-top {
+      width: 280px;
+      cursor: pointer;
+    }
+    .chair-description-bottom {
+      font-size: 20px;
+      line-height: 28px;
+      margin: 7px 0px 0px 0px;
+      font-weight: normal;
+    }
+  }
+
+  &__material {
+    font-size: 21px;
+    line-height: 25px;
+    padding: 15px 0px;
+    border-bottom: 1px solid $gray-light;
+    .chair-material-top {
+      width: 150px;
+      cursor: pointer;
+    }
+    .chair-material-bottom {
+      font-size: 20px;
+      line-height: 28px;
+      margin: 7px 0px 0px 0px;
+      font-weight: normal;
+    }
+  }
+}
+
+.arrow-down {
+  transform: translate(0px, -2px);
+}
+
+.btn-chair-details {
+  margin: 40px 0px 0px 0px;
+}

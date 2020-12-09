@@ -1,5 +1,4 @@
 .content {
-  // .content__top
   &__top {
     padding: 32px 0px 0px 0px;
     display: flex;
@@ -9,7 +8,6 @@
 .content-top {
 }
 .categories {
-  // .categories__item
   &__item {
     background-color: #eeeeee;
     padding: 10px 20px;
@@ -25,7 +23,6 @@
   }
 }
 .categoris {
-  // .categoris__list
   &__list {
     display: flex;
     font-family: 'Open Sans';
@@ -45,7 +42,6 @@
 }
 
 .sort {
-  // .sort__title
   &__title {
     font-size: 18px;
     span {
@@ -62,7 +58,6 @@
   justify-content: flex-end;
   cursor: pointer;
   z-index: 1;
-  // .popup-sort__list
   &__list {
     display: none;
 
@@ -84,7 +79,6 @@
       padding: 15px 0px;
     }
   }
-  // .popup-sort__item
   &__item {
     padding: 5px 10px;
     line-height: 2;

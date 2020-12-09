@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Button } from '../Button'
+import { Button } from '../Button';
 
 export const CartEmpty = () => {
   return (
@@ -19,5 +19,5 @@ export const CartEmpty = () => {
         </Button>
       </Link>
     </div>
-  )
-}
+  );
+};

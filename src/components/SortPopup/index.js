@@ -1,3 +1,3 @@
-import { SortPopup } from './SortPopup'
+import { SortPopup } from './SortPopup';
 
-export { SortPopup }
+export { SortPopup };

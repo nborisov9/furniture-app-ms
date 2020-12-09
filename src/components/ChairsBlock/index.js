@@ -1,2 +1,2 @@
-import { ChairsBlock } from './ChairsBlock'
-export { ChairsBlock }
+import { ChairsBlock } from './ChairsBlock';
+export { ChairsBlock };
