@@ -34,7 +34,7 @@ export const SortPopup = React.memo(({ sortItems, onClickSortType }) => {
       <div className="sort__title">
         <i
           className={
-            visiblePopup ? 'arrow fas fa-sort-up arrow-active' : 'arrow fas fa-sort-up'
+            visiblePopup ? 'arrow fas fa-sort-up' : 'arrow fas fa-sort-up arrow-active'
           }></i>
         Сортировать по: <span onClick={toggleVisiblePopup}>{activeLabel}</span>
       </div>

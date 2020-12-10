@@ -49,8 +49,8 @@ export const ChairDetails = ({ match }) => {
                     <i
                       className={
                         descripVisible
-                          ? 'arrow fas fa-sort-down arrow-down'
-                          : 'arrow fas fa-sort-up'
+                          ? 'arrow fas fa-sort-up'
+                          : 'arrow fas fa-sort-down arrow-down'
                       }></i>
                     Подробнее о товаре
                   </div>
@@ -63,8 +63,8 @@ export const ChairDetails = ({ match }) => {
                     <i
                       className={
                         materialVisible
-                          ? 'arrow fas fa-sort-down arrow-down'
-                          : 'arrow fas fa-sort-up'
+                          ? 'arrow fas fa-sort-up'
+                          : 'arrow fas fa-sort-down arrow-down'
                       }></i>
                     Материал
                   </div>
