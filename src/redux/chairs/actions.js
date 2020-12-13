@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-import { SET_CHAIRS } from '../action-types/chairs';
-import { SET_LOADED } from '../action-types/chairs';
+import { SET_CHAIRS } from './types';
+import { SET_LOADED } from './types';
 
 export const fetchChairs = (category, sortBy) => (dispatch) => {
   axios

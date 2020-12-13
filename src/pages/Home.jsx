@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import { Categories, ChairsBlock, SortPopup, LoadingBlock } from '../components';
-import { fetchChairs } from '../redux/actions/chairs';
-import { setSortBy, setCategory } from '../redux/actions/filters';
-import { addChairsToCart } from '../redux/actions/cart';
+import { fetchChairs } from '../redux/chairs/actions';
+import { setSortBy, setCategory } from '../redux/filters/actions';
+import { addChairsToCart } from '../redux/cart/actions';
 
 const categoryNames = ['Кресла', 'Барные', 'Табуреты', 'Для кафе', 'Для кухни'];
 const sortItems = [

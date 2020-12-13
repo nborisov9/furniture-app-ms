@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { clearCart } from '../redux/actions/cart';
+import { clearCart } from '../redux/cart/actions';
 import { Button } from '../components';
 import { CartItems } from '../components';
 import { CartEmpty } from '../components';
@@ -25,6 +25,10 @@ export const Cart = () => {
 
   const closeModalConfirm = () => {
     setVisibleModal(false);
+  };
+
+  const onClickGetOrder = () => {
+    console.log('Ваш заказ: ', items);
   };
 
   return (
@@ -73,7 +77,7 @@ export const Cart = () => {
                 Вeрнуться назад
               </Button>
             </Link>
-            <Button className="button-cart button btn-pay">
+            <Button onClick={onClickGetOrder} className="button-cart button btn-pay">
               <span>Оплатить сейчас</span>
             </Button>
           </div>

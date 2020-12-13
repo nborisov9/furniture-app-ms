@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { plusCartItem, minusCartItem, removeCartItem } from '../../redux/actions/cart';
+import { plusCartItem, minusCartItem, removeCartItem } from '../../redux/cart/actions';
 import { ModalConfirm } from '../ModalConfirm';
 
 export const CartItems = ({ id, name, type, size, image, totalCountItem, totalPriceItem }) => {

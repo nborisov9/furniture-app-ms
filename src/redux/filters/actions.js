@@ -1,5 +1,5 @@
-import { SET_SORT_BY } from '../action-types/filters';
-import { SET_CATEGORY } from '../action-types/filters';
+import { SET_SORT_BY } from './types';
+import { SET_CATEGORY } from './types';
 
 export const setSortBy = ({ type, order }) => ({
   type: SET_SORT_BY,

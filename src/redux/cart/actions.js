@@ -1,8 +1,8 @@
-import { ADD_CHAIRS_CART } from '../action-types/cart';
-import { CLEAR_CART } from '../action-types/cart';
-import { REMOVE_CART_ITEM } from '../action-types/cart';
-import { MINUS_CART_ITEM } from '../action-types/cart';
-import { PLUS_CART_ITEM } from '../action-types/cart';
+import { ADD_CHAIRS_CART } from './types';
+import { CLEAR_CART } from './types';
+import { REMOVE_CART_ITEM } from './types';
+import { MINUS_CART_ITEM } from './types';
+import { PLUS_CART_ITEM } from './types';
 
 export const addChairsToCart = (prodObject) => ({
   type: ADD_CHAIRS_CART,

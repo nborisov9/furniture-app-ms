@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const InputToggle = ({ onClick, theme }) => {
   return (
@@ -9,4 +10,9 @@ export const InputToggle = ({ onClick, theme }) => {
         className={theme ? 'on-off-toggle-theme__light' : 'on-off-toggle-theme__dark'}></label>
     </div>
   );
+};
+
+InputToggle.propTypes = {
+  onClick: PropTypes.func,
+  theme: PropTypes.bool,
 };

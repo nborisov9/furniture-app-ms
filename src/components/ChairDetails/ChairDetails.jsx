@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { Button } from '../Button';
 import { Home } from '../../pages';
@@ -84,4 +85,8 @@ export const ChairDetails = ({ match }) => {
     }
     return <Home />;
   }
+};
+
+ChairDetails.propTypes = {
+  match: PropTypes.object,
 };
