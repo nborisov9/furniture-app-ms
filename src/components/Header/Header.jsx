@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { Button } from '../Button';
 import { InputToggle } from '../InputToggle';
 import { useThemeContext } from '../../utils';
-import line from '../../assets/img/header/vertline.png';
+import line from '../../assets/line.png';
 
 export const Header = () => {
   const { totalPrice, totalCount } = useSelector(({ cart }) => cart);
