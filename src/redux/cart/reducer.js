@@ -1,8 +1,11 @@
-import { ADD_CHAIRS_CART } from './types';
-import { CLEAR_CART } from './types';
-import { REMOVE_CART_ITEM } from './types';
-import { MINUS_CART_ITEM } from './types';
-import { PLUS_CART_ITEM } from './types';
+import {
+  ADD_CHAIRS_CART,
+  CLEAR_CART,
+  REMOVE_CART_ITEM,
+  MINUS_CART_ITEM,
+  PLUS_CART_ITEM,
+} from './types';
+
 import { getTotalData, getTotalPrice } from './utils';
 
 const initialState = {

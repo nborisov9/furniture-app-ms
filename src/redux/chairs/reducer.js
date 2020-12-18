@@ -1,5 +1,4 @@
-import { SET_CHAIRS } from './types';
-import { SET_LOADED } from './types';
+import { SET_CHAIRS, SET_LOADED } from './types';
 
 const initialState = {
   items: [],
