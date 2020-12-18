@@ -22,7 +22,7 @@ export const ChairsBlock = ({
   const [activeType, setActiveType] = React.useState(types[0]);
 
   const onAddChairToCart = () => {
-    const obj = {
+    const chairData = {
       id,
       name,
       imageUrl,
@@ -30,7 +30,7 @@ export const ChairsBlock = ({
       size: availSizes[activeSize],
       type: availTypes[activeType],
     };
-    onClickAddChair(obj);
+    onClickAddChair(chairData);
   };
 
   const onSelectType = (index) => {

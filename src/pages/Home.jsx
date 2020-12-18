@@ -40,8 +40,8 @@ export const Home = () => {
     [dispatch],
   );
 
-  const handleChairToCart = (obj) => {
-    dispatch(addChairsToCart(obj));
+  const handleChairToCart = (chairData) => {
+    dispatch(addChairsToCart(chairData));
   };
 
   const getCurrentIdChair = (id) => {
@@ -63,13 +63,15 @@ export const Home = () => {
         <div className="content-product__row">
           {isLoaded
             ? items &&
-              items.map((obj) => (
+              items.map((data) => (
                 <ChairsBlock
                   onClickGetChairId={getCurrentIdChair}
                   onClickAddChair={handleChairToCart}
-                  addChairsCount={chairsCount[obj.id] && chairsCount[obj.id].items.length}
-                  key={`${obj.id}_${obj.name}`}
-                  {...obj}
+                  addChairsCount={
+                    chairsCount[data.id] && chairsCount[data.id].items.length
+                  }
+                  key={`${data.id}_${data.name}`}
+                  {...data}
                 />
               ))
             : Array(24)

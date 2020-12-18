@@ -7,8 +7,9 @@ import { Button } from '../Button';
 import { Home } from '../../pages';
 
 export const ChairDetails = ({ match }) => {
+  const paramsId = match.params.id;
   const { items } = useSelector(({ chairs }) => chairs);
-  const currentChair = items.find((obj) => obj.id === Number(match.params.id));
+  const currentChair = items.find(({ id }) => id === Number(paramsId));
   const history = useHistory();
 
   const [descripVisible, setDescripVisible] = React.useState(false);
@@ -46,7 +47,9 @@ export const ChairDetails = ({ match }) => {
                   <i className="fas fa-ruble-sign"></i>
                 </div>
                 <div className="chair-details-body__description">
-                  <div className="chair-description-top" onClick={toggleDescriptionHandler}>
+                  <div
+                    className="chair-description-top"
+                    onClick={toggleDescriptionHandler}>
                     <i
                       className={
                         descripVisible
@@ -56,7 +59,9 @@ export const ChairDetails = ({ match }) => {
                     Подробнее о товаре
                   </div>
                   {descripVisible && (
-                    <div className="chair-description-bottom">{currentChair.description}</div>
+                    <div className="chair-description-bottom">
+                      {currentChair.description}
+                    </div>
                   )}
                 </div>
                 <div className="chair-details-body__material">
@@ -80,7 +85,7 @@ export const ChairDetails = ({ match }) => {
       </div>
     );
   } else {
-    if (Number(match.params.id) > 23) {
+    if (Number(paramsId) > 23) {
       history.push('/');
     }
     return <Home />;
